@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+*,*:before,*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    overflow-x: hidden;
+    background: linear-gradient(45deg, #141414, #3F3F3F);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    scrollbar-width: none ;
+}
+h1{
+    font-size: 25px;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #ffffff;
+}
+@media(max-width: 769px){
+    h1{
+        font-size: 18px;
+    }
+}
+@media(max-width: 992px){
+    h1{
+        font-size: 20px;
+    }
+}
+.logo{
+    position: relative;
+    left: 0;top: 0;
+    width: 200px;
+    z-index: 30;-webkit-user-drag: none;
+}
+.header{
+    width: 100%;
+    /*margin-top: -25px;*/
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    padding: 50px 50px 50px 50px;
+}
+@media(max-width: 992px){
+    .wrapper{
+        padding: 30px 30px 30px 30px;
+    }
+}
+@media(max-width: 767px){
+    .wrapper{
+        padding: 10px 10px 10px 10px;
+    }
+}
+.admin__content{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(120deg,#FFFFFF66,#FFFFFF00);
+    width: 100%;
+    min-height: 300px;
+    max-height: 100%;
+    border-radius: 10px;
+    padding: 40px 40px ;
+    font-family: Montserrat;
+    color: #fff;
+    text-transform: none;
+}
+@media(max-width: 992px){
+    .admin__content{
+        padding: 25px 25px;
+    }
+}
+@media(max-width: 767px){
+    .admin__content{
+        padding: 15px 15px;
+    }
+}
+.main{
+    margin-top: 30px;
+    
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 24px;
+    text-shadow: 0px 1px 3px #101010;
+}
+@media(max-width: 1000px){
+    .about{
+        display: grid;
+        grid-template-columns:50% 50% ;
+        grid-template-rows:50% 50%  ;
+    }
+    .about__block{
+        flex: 0 1 50%;
+    }
+}
+@media(max-width: 500px){
+    .about{
+        display: inline-table;
+        justify-content: none;
+    }
+
+}
+.about span{
+font-size: 15px;
+color: #85d90f;
+text-shadow: 0px 0px 0px #cdcdcd00;
+width: 100%;
+}
+.about__block{
+    flex: 0 1 25%;
+}
+.attachment__list{
+    font-family: Montserrat;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-shadow: 0px 0px 0px #cdcdcd00;
+    line-height: 180%;
+    margin-top: 30px;
+}
+.attachment__list span{
+    color: #85d90f;
+}
+.Special__list{
+    font-family: Montserrat;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-shadow: 0px 0px 0px #cdcdcd00;
+    line-height: 180%;
+    margin-top: 30px;
+}
+.Special__list span{
+    color: #85d90f;
+}
+.Choose{
+font-family: Montserrat;
+font-size: 20px;
+min-height: 40px;
+max-width: 300px;
+min-width: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 5px;
+box-shadow: 0px 4px 5px #111;
+border: none;
+margin-left: 10px;
+}
+.acseption{
+    display: flex;
+    width: min-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+@media(max-width: 500px){
+    .acseption{
+        display: grid;
+    }
+    .Choose{
+        margin-top: 10px;
+    }
+}
+._acsept{
+    background-color: #7dba28;
+    color: white;
+    transition: 0.25s;
+}
+._acsept:hover{
+    background: #fff;
+    color: #101010;
+}
+._ignore{
+    border: 2px solid #7dba28;
+    background: none;
+    color: #7dba28;
+    transition: 0.25s;
+}
+._ignore:hover{
+    background-color: #101010;
+    color: #FFF;
+    border: #101010;
+}
+.qwerty{
+    display: flex;
+    justify-content: space-between;
+}
+.qwertytext1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    position: relative;
+    top: 5px;
+}
+.qwertytext2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 45px;
+}
+@media(max-width: 500px){
+    .qwerty{
+        display: grid;
+    }
+}
+@media (max-width: 1000px) {
+    .Choose{
+        height: 40px;
+    }
+}
+@media (min-width:1000px) {
+    .Choose{
+        height: 60px;
+    }
+}

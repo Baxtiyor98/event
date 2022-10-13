@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="{% static "img/favicon.png" %}">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="{% static 'css/calendar.css' %}"/>
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__logo">
+            <img src="{% static 'img/logo.png' %}" alt="404" class="logo"/>
+        </div>
+    </header>
+    <main class="content">
+        <div class="content__body">
+            <div class="calendar__block">
+                <div class="calendar">
+
+                </div>
+            </div>
+            <div class="orders-menu">
+                {% for o in orders %}
+                    <div class="orders-menu__card">
+                        <p class="card__title">{{ forloop.counter }}. {{ o.fullname }}</p>
+                        <p class="card__time">Time: {{ o.start_time|time:"H:i" }} - {{ o.finish_time|time:"H:i" }}</p>
+                        <p class="card__time">Date: {{ o.date|date:"d.m.Y" }}</p>
+                        <p class="card__subtitle">{{ o.company }}: {{ o.place }} {{ o.user.first_name }}</p>
+                        <p class="card__subtitle">Masul: {{ o.user.first_name }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- wrapper -->
+<div id="overlay" class="overlay"></div>
+<div class="wrapper_modal" id="modal_content">
+    <form action="{% url 'get_order' %}" class="container_modal" method="post">
+        {% csrf_token %}
+        <div class="col1">
+            <section>
+                <div class="group">
+                    <input name="fullname" type="text" class="input" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label">Ism familya</label>
+                </div>
+                <div class="group">
+                    <input name="company" type="text" class="input" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label">Kompaniya</label>
+                </div>
+                <div class="group">
+                    <input name="lavozim" type="text" class="input" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label">Lavozim</label>
+                </div>
+                <div class="group">
+                    <input name="email" type="text" class="input" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label">Email</label>
+                </div>
+                <div class="group">
+                    <input name="phone" type="text" class="input" value="+998 " required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="label">Telefon</label>
+                </div>
+                <textarea name="" cols="30" rows="10" class="texarea1" placeholder="Izoh qoldiring..."></textarea>
+            </section>
+        </div>
+        <div class="col2">
+            <select name="place" class="select__option">
+                <option style="background-color: #1b1b1b">Please choose...</option>
+                {% for i in places %}
+                    <option style="background-color: #1b1b1b" value="{{ i.id }}">{{ i.name }}</option>
+                {% endfor %}
+            </select>
+            <div class="data">
+                <div class="select_time">
+                    <div class="selec_time-1">
+                        <label for="start" class="select_time-label">Start: </label><br>
+                        <input type="time" name="start_time" id="start" class="time_interval">
+                    </div>
+                    <div class="select_time-2">
+                        <label for="end" class="select_time-label">Finish: </label><br>
+                        <input type="time" name="finish_time" id="end" class="time_interval">
+                    </div>
+                </div>
+            </div>
+            <input type="file" name="file" class="file_select">
+            <section title=".squaredFour">
+                <h1 style="color: #7dba28; font-weight: 400; font-size: 24px;">Выбор стандартных условий, таких
+                    как:</h1>
+                {% for i in devices %}
+                    <div class="squaredFour">
+                        <input type="checkbox" id="{{ i.name }}" value="{{ i.id }}" name="device"/>
+                        <label for="{{ i.name }}" class="chek_label"></label>
+                        <label for="{{ i.name }}" class="chek_label-tex">{{ i.name }}</label>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+        <div class="col3">
+            <section title=".squaredFour">
+                <h1 style="color: #7dba28; font-weight: 400; font-size: 24px;">Выбор стандартных условий, таких
+                    как:</h1>
+                <div class="squaredFour">
+{#                    <input type="checkbox" id="people"/>#}
+                    <label for="people"></label>
+                    <label for="people">People</label>
+                    <input name="people" type="number" required>
+                </div>
+                {% for j in snacks %}
+                    <div class="squaredFour">
+                        <input type="checkbox" value="{{ j.id }}" id="{{ j.name }}" name="snack"/>
+                        <label for="{{ j.name }}" class="chek_label"></label>
+                        <label for="{{ j.name }}" class="chek_label-tex">{{ j.name }}</label>
+                        <input name="quantity{{ j.id }}" type="number" class="point">
+                    </div>
+                {% endfor %}
+            </section>
+            <div class="date_time-real"><span>Date:</span>
+                <input name="date_data" type="text" id="data">
+            </div>
+            <button type="submit" class="btn">Зарегистрировать</button>
+        </div>
+    </form>
+</div>
+</div>
+<script src="{% static "js/calendar.js" %}"></script>
+</body>
+
+</html>
