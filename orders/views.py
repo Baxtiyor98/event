@@ -19,7 +19,7 @@ def index(request):
 
 def get_order(request):
     if request.method == 'POST':
-        place = Place.objects.get(id=int(request.POST.get('place')))
+        place = Place.objects.filter(id=int(request.POST.get('place'))).first()
         order = Order.objects.create(fullname=request.POST["fullname"],
                                      company=request.POST["company"],
                                      position=request.POST["lavozim"],
@@ -39,8 +39,11 @@ def get_order(request):
         for j in request.POST.getlist("snack"):
             if j:
                 Quantity.objects.create(order=order, snack_id=int(j), number=int(request.POST["quantity" + j]))
-        send_email({'to_email': order.email,
-                    'code': f"{order.fullname}, Ваш запрос будет получен в ближайшее время."})
+        try:
+            send_email({'to_email': order.email,
+                        'code': f"{order.fullname}, Ваш запрос будет получен в ближайшее время."})
+        except:
+            pass
         return redirect('index')
 
 
@@ -48,7 +51,7 @@ def admin(request):
     if request.method == 'POST':
         id = request.POST.get('id')
         message = request.POST.get('message')
-        order = Order.objects.get(id=int(id))
+        order = Order.objects.filter(id=int(id)).first()
         send_email({'to_email': order.email,
                     'code': f"{message}"})
         order.delete()
@@ -59,7 +62,7 @@ def admin(request):
 
 def accept(request):
     data = json.load(request)
-    order = Order.objects.get(id=int(data["id"]))
+    order = Order.objects.filter(id=int(data["id"])).first()
     order.is_active = True
     order.save()
     send_email({'to_email': order.email,

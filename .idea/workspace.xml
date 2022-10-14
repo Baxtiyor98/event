@@ -2,58 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e178d05-ed52-48ee-a475-93ea9e34c822" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/EventCalendar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventCalendar/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventCalendar/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventCalendar/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventCalendar/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventCalendar/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0002_order_is_active_order_place_quantity_order_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0003_alter_quantity_options_rename_lavozim_order_position.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0004_remove_order_snack.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0005_place_alter_quantity_options_order_description_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0006_order_is_deleted_order_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/0007_order_people_alter_quantity_order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/registor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/emoty.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/registor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/calendar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.9.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/sqlformat.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EventCalendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EventCalendar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +99,9 @@
       <workItem from="1665085880345" duration="6919000" />
       <workItem from="1665144545104" duration="128000" />
       <workItem from="1665506537964" duration="601000" />
-      <workItem from="1665681388855" duration="307000" />
+      <workItem from="1665681388855" duration="3288000" />
+      <workItem from="1665672994163" duration="642000" />
+      <workItem from="1665740616460" duration="1496000" />
     </task>
     <servers />
   </component>
